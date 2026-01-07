@@ -1,19 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// NOTE: This project keeps Discord integration code in the monorepo workspace.
-// Next does not support importing via @/../... alias; use an explicit relative import.
-// This works with `experimental.externalDir = true`.
-import { discordRouter } from "../../../../../../../packages/integrations/discord/router";
-
-export async function POST(req: NextRequest) {
-  try {
-    const payload = await req.json();
-    const result = await discordRouter.handle(payload, req.headers);
-    return NextResponse.json(result, { status: 200 });
-  } catch (err: any) {
-    return NextResponse.json(
-      { ok: false, error: err?.message ?? "Discord interaction handler failed" },
-      { status: 500 }
-    );
-  }
+/**
+ * TEMPORARY DISCORD STUB
+ *
+ * This endpoint intentionally bypasses Discord integration
+ * so the app can deploy cleanly while core systems come online.
+ *
+ * Discord interactions expect a response with `type: 1`
+ * to acknowledge receipt.
+ */
+export async function POST(_req: NextRequest) {
+  return NextResponse.json({ type: 1 });
 }
+// TODO: Restore Discord integration after v1 deploy
