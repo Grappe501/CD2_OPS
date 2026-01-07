@@ -1,0 +1,21 @@
+/* Module 21 — Large type + high contrast modes */
+
+:root[data-large-type="1"] {
+  font-size: 18px;
+}
+
+:root[data-large-type="1"] .text-sm {
+  font-size: 1rem;
+}
+
+:root[data-high-contrast="1"] {
+  --cd2-bg: #000;
+}
+
+:root[data-high-contrast="1"] body {
+  background: #000 !important;
+}
+
+:root[data-high-contrast="1"] * {
+  border-color: rgba(255,255,255,0.18) !important;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "cd2_ops",
+  "private": true,
+  "version": "0.4.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm --workspace apps/web run dev",
+    "build": "npm --workspace apps/web run build"
+  }
+}

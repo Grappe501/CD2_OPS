@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-bg: 10 15 25;
+  --brand-panel: 15 23 42;
+  --brand-border: 30 41 59;
+  --brand-text: 226 232 240;
+  --brand-muted: 148 163 184;
+  --brand-primary: 56 189 248;
+  --brand-accent: 34 197 94;
+  --shadow-soft: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+html, body { height: 100%; }
+body { background: rgb(var(--brand-bg)); color: rgb(var(--brand-text)); }
+a { color: inherit; }

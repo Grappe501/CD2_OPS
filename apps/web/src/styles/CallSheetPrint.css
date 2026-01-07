@@ -1,0 +1,7 @@
+/* Module 31 — call sheet printing */
+@media print {
+  .print\:hidden { display: none !important; }
+  body { background: white !important; }
+  table { font-size: 12px !important; }
+  th, td { padding: 8px !important; }
+}

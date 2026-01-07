@@ -1,0 +1,33 @@
+## CD2_OPS v3.0.0 — Module 29 (One-tap fundraising logging + AI assist)
+- Added AI storage + approvals:
+  - cd2.ai_prompt_versions
+  - cd2.ai_suggestions
+- Added AI views:
+  - vw_ai_usage_14d
+  - vw_fr_ai_latest_by_prospect
+- Added AI API endpoints:
+  - POST /api/ai/precall
+  - POST /api/ai/followup
+  - POST /api/ai/suggestions/approve
+  - POST /api/ai/suggestions/reject
+- Added fundraising form endpoints:
+  - POST /api/forms/fundraising/log-call
+  - POST /api/forms/fundraising/log-pledge
+  - POST /api/forms/fundraising/log-followup
+- Added premium modals:
+  - FrLogCallModal
+  - FrAddPledgeModal
+  - FrAddFollowupModal
+  - FrAiPreCallBriefModal
+  - FrAiFollowupDraftModal
+- Added patches for:
+  - QuickAddHost integration (fundraising quickAdd values)
+  - Next Calls table row actions
+
+Checklist:
+- [ ] Apply migration 018
+- [ ] Apply views 032
+- [ ] Set env vars for OpenAI + feature flags
+- [ ] Wire QuickAddHost cases for fundraising
+- [ ] Add row actions to Next Calls table widget
+- [ ] Verify AI disabled path (ENABLE_OPENAI=false) shows friendly error

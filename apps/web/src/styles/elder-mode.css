@@ -1,0 +1,25 @@
+/* Module 30 — Elder-friendly mode (big buttons + bigger text)
+   Applied via <html data-elder="true"> set by UiPrefsProvider.
+*/
+
+html[data-elder="true"] {
+  font-size: 18px;
+}
+
+html[data-elder="true"] .btn-elder {
+  min-height: 52px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 1rem;
+}
+
+html[data-elder="true"] .card-elder {
+  padding: 18px;
+}
+
+html[data-elder="true"] .table-elder td,
+html[data-elder="true"] .table-elder th {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: 0.98rem;
+}
