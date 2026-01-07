@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@cd2/core": "workspace:*",
-    "@cd2/db": "workspace:*",
+    "@cd2/core": "file:../../packages/core",
+    "@cd2/db": "file:../../packages/db",
     "bcryptjs": "2.4.3",
     "clsx": "^2.1.1",
     "discord-interactions": "^4.0.0",
