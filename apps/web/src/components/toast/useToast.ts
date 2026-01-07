@@ -40,7 +40,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     return id;
   }, [remove]);
 
-  return <ToastCtx.Provider value={{ push, remove, items }}>{children}</ToastCtx.Provider>;
+  return React.createElement(ToastCtx.Provider, { value: { push, remove, items } }, children);
 }
 
 export function useToast() {

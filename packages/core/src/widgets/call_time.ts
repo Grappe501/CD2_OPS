@@ -26,7 +26,7 @@ export const callTimeWidgets: WidgetDef[] = [
   {
   'id': 'calltime.today.lane',
   'pageKey': 'call_time',
-  'title': 'Today's Lane + Script',
+  'title': "Today's Lane + Script",
   'description': 'Lane-of-day assignment and primary script for the lane.',
   'dataSource': {
     'kind': 'view',

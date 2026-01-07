@@ -102,7 +102,7 @@ export const cmOperatingBoardWidgets: WidgetDef[] = [
   'id': 'cm.stop_doing.active',
   'pageKey': 'cm_operating_board',
   'title': 'Stop-Doing List (Active)',
-  'description': 'Active 'stop doing' commitments and exceptions.',
+  "description": "Active 'stop doing' commitments and exceptions.",
   'dataSource': {
     'kind': 'view',
     'name': 'v_stop_doing_active'
