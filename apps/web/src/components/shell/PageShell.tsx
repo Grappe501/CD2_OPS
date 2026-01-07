@@ -1,5 +1,5 @@
 import React from "react";
-import AppShell from "./AppShell";
+import { AppShell } from "./AppShell";
 
 type Props = {
   title?: string;
@@ -12,14 +12,28 @@ type Props = {
  * Lightweight page wrapper used by fundraising routes.
  * This repo already has multiple shell components; PageShell is a
  * compatibility layer so routes compile consistently.
+ *
+ * Some routes import `PageShell` as a named export, others as default.
+ * We provide both to avoid drift.
  */
-export default function PageShell({ title, subtitle, actions, children }: Props) {
+export function PageShell({ title, subtitle, actions, children }: Props) {
   return (
     <AppShell>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16 }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          gap: 16,
+        }}
+      >
         <div>
-          {title ? <h1 style={{ fontSize: 22, fontWeight: 700, margin: 0 }}>{title}</h1> : null}
-          {subtitle ? <p style={{ marginTop: 6, marginBottom: 0, opacity: 0.8 }}>{subtitle}</p> : null}
+          {title ? (
+            <h1 style={{ fontSize: 22, fontWeight: 700, margin: 0 }}>{title}</h1>
+          ) : null}
+          {subtitle ? (
+            <p style={{ marginTop: 6, marginBottom: 0, opacity: 0.8 }}>{subtitle}</p>
+          ) : null}
         </div>
         {actions ? <div>{actions}</div> : null}
       </div>
@@ -28,3 +42,5 @@ export default function PageShell({ title, subtitle, actions, children }: Props)
     </AppShell>
   );
 }
+
+export default PageShell;
