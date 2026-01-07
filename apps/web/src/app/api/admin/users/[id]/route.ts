@@ -31,7 +31,7 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
   const user_id = params.id;
   const body = await req.json();
 
-  const fields = [];
+  const fields: string[] = [];
   const vals: any[] = [];
   let i = 1;
 
@@ -49,7 +49,7 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
 
   vals.push(user_id);
 
-  const client = await pool.connect()
+  const client = await pool.connect();
   try {
     await client.query("BEGIN");
     const upd = await client.query(
@@ -70,7 +70,7 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
       action,
       entity_type: "user",
       entity_id: user_id,
-      metadata: { patch: body }
+      metadata: { patch: body },
     });
 
     await client.query("COMMIT");
